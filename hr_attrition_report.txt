@@ -1,0 +1,76 @@
+
+HR ATTRITION ANALYSIS REPORT
+=============================
+
+1. OVERALL SUMMARY
+------------------
+Total Employees: 1470
+Attrition Count: 237
+Attrition Rate: 16.12%
+Average Age: 36.92
+Average Monthly Income: 6502.93
+
+
+2. KEY FINDINGS
+---------------
+OverTime:
+- No: 10.44% attrition
+- Yes: 30.53% attrition
+
+Income Band:
+- 0-3K: 28.61%
+- 3K-6K: 12.72%
+- 6K-10K: 12.0%
+- 10K-15K: 13.51%
+- 15K+: 3.76%
+
+
+3. JOB ROLE PATTERNS
+--------------------
+- Sales Representative: 39.76%
+- Laboratory Technician: 23.94%
+- Human Resources: 23.08%
+- Sales Executive: 17.48%
+- Research Scientist: 16.1%
+- Manufacturing Director: 6.9%
+- Healthcare Representative: 6.87%
+- Manager: 4.9%
+- Research Director: 2.5%
+
+
+4. JOB SATISFACTION
+-------------------
+- Satisfaction Level 1: 22.84%
+- Satisfaction Level 2: 16.43%
+- Satisfaction Level 3: 16.52%
+- Satisfaction Level 4: 11.33%
+
+
+5. WORK-LIFE BALANCE
+--------------------
+- Level 1: 31.25%
+- Level 2: 16.86%
+- Level 3: 14.22%
+- Level 4: 17.65%
+
+
+6. HR AREAS TO INVESTIGATE
+--------------------------
+- Overtime and workload patterns
+- Attrition among lower-income employees
+- High-attrition job roles
+- Employee job satisfaction
+- Work-life balance
+
+
+7. BUSINESS RECOMMENDATIONS
+---------------------------
+1. Investigate workload and overtime patterns.
+2. Review retention strategies for high-attrition job roles.
+3. Examine compensation patterns among lower-income employees.
+4. Monitor employee satisfaction levels.
+5. Review work-life balance initiatives.
+
+IMPORTANT:
+These findings represent observed patterns in the dataset.
+They do not establish causal relationships.

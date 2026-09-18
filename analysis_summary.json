@@ -1,0 +1,41 @@
+{
+    "Total Employees": 1470,
+    "Attrition Count": 237,
+    "Attrition Rate": 16.12,
+    "Average Age": 36.92,
+    "Average Monthly Income": 6502.93,
+    "OverTime Attrition": {
+        "No": 10.44,
+        "Yes": 30.53
+    },
+    "Income Band Attrition": {
+        "0-3K": 28.61,
+        "3K-6K": 12.72,
+        "6K-10K": 12.0,
+        "10K-15K": 13.51,
+        "15K+": 3.76
+    },
+    "JobRole Attrition": {
+        "Sales Representative": 39.76,
+        "Laboratory Technician": 23.94,
+        "Human Resources": 23.08,
+        "Sales Executive": 17.48,
+        "Research Scientist": 16.1,
+        "Manufacturing Director": 6.9,
+        "Healthcare Representative": 6.87,
+        "Manager": 4.9,
+        "Research Director": 2.5
+    },
+    "Job Satisfaction Attrition": {
+        "1": 22.84,
+        "2": 16.43,
+        "3": 16.52,
+        "4": 11.33
+    },
+    "Work Life Balance Attrition": {
+        "1": 31.25,
+        "2": 16.86,
+        "3": 14.22,
+        "4": 17.65
+    }
+}

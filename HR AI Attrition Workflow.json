@@ -1,0 +1,122 @@
+{
+  "name": "HR AI Attrition Workflow",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "e2a6aee0-3deb-4fc8-916d-fcf32a34216c",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "operation": "toText",
+        "sourceProperty": "report",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.convertToFile",
+      "typeVersion": 1.1,
+      "position": [
+        640,
+        0
+      ],
+      "id": "9957bb57-e33c-4435-bf48-209c91b1a856",
+      "name": "Convert to File"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        944,
+        160
+      ],
+      "id": "46a6d9eb-a84e-48d3-b4be-e6e975b4c7bd",
+      "name": "Sticky Note"
+    },
+    {
+      "parameters": {
+        "jsCode": "return [\n  {\n    json: {\n      total_employees: 1470,\n      attrition_count: 237,\n      attrition_rate: 16.12,\n      overtime_no: 10.44,\n      overtime_yes: 30.53,\n      low_income_attrition: 28.61,\n      high_income_attrition: 3.76,\n      sales_representative_attrition: 39.76,\n      job_satisfaction_low: 22.84,\n      work_life_balance_low: 31.25\n    }\n  }\n];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        224,
+        0
+      ],
+      "id": "e8207d61-da55-40c9-9b12-d98c658c5b29",
+      "name": "HR Analysis Data"
+    },
+    {
+      "parameters": {
+        "jsCode": "const d = $json;\n\nconst report = `\nHR ATTRITION ANALYSIS REPORT\n\nTotal Employees: ${d.total_employees}\nAttrition Count: ${d.attrition_count}\nAttrition Rate: ${d.attrition_rate}%\n\nOVERTIME\nOvertime - No: ${d.overtime_no}%\nOvertime - Yes: ${d.overtime_yes}%\n\nINCOME\n0-3K Income Attrition: ${d.low_income_attrition}%\n15K+ Income Attrition: ${d.high_income_attrition}%\n\nJOB ROLE\nSales Representative Attrition: ${d.sales_representative_attrition}%\n\nJOB SATISFACTION\nLow Job Satisfaction Attrition: ${d.job_satisfaction_low}%\n\nWORK-LIFE BALANCE\nLow Work-Life Balance Attrition: ${d.work_life_balance_low}%\n\nKEY OBSERVATIONS\n1. Overall attrition rate is ${d.attrition_rate}%.\n2. Employees working overtime show higher attrition than employees not working overtime.\n3. The lowest income band shows higher attrition.\n4. Sales Representatives have comparatively high attrition.\n5. Low job satisfaction and poor work-life balance are areas for HR investigation.\n\nNOTE:\nThese findings show associations in the dataset and do not prove causation.\n`;\n\nreturn [\n  {\n    json: {\n      report: report\n    }\n  }\n];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        432,
+        0
+      ],
+      "id": "9bcb686b-0df0-4813-be93-04a52bffb472",
+      "name": "Generate HR Report"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "HR Analysis Data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Convert to File": {
+      "main": [
+        []
+      ]
+    },
+    "HR Analysis Data": {
+      "main": [
+        [
+          {
+            "node": "Generate HR Report",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Generate HR Report": {
+      "main": [
+        [
+          {
+            "node": "Convert to File",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "150957ef-2a7c-443c-801f-30fa0615647a",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "fe52ce6cd19b077095731ad6b09a7d55bbc51775c02f221e7c5327810d9e7b20"
+  },
+  "nodeGroups": [],
+  "id": "pvCzMEEc8twEXflj",
+  "tags": []
+}
